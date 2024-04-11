@@ -25,23 +25,11 @@ jobs:
       run: |
         pip install -r requirements.txt
         
-        user='${{ 13533253679 }}'
-        pwd='${{ 3466298abC@ }}'
-        
-        user_list=()
-        pwd_list=()
 
-        IFS="#"
+        user_list[]=["13533253679"]
 
-        for u in ${user[*]}
-        do
-        user_list[${#user_list[*]}]=${u}
-        done
+        pwd_list[]=["3466298abC@"]
 
-        for p in ${pwd[*]}
-        do
-        pwd_list[${#pwd_list[*]}]=${p}
-        done
 
         user_num=${#user_list[*]}
         pwd_num=${#pwd_list[*]}
